@@ -1,0 +1,12 @@
+{% extends themeRootFile %}
+
+{% block pageContent %}
+    <article class="post post-{{ post.slug }}">
+        <header>{{post.title}}</header>
+        <div class="subheader">{{ post.author }} - {{ post.date }}</div>
+        <div class="content">
+            {{post.content}}
+        </div>
+        <footer>{{post.footer}}</footer>
+    </article>
+{% endblock %}

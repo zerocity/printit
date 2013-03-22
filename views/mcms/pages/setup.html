@@ -1,0 +1,22 @@
+{%- extends themeRootFile -%}
+
+{%- block title -%}
+  {{ config.title|raw }} - setup
+{%- endblock -%}
+
+{%- block pageContent -%}
+    {%- if completed -%}
+        <div>setup completed</div>
+    {%- endif -%}
+
+    <form action="" method="post">
+        <fieldset>
+            <legend>Press button to setup</legend>
+            <div class="fields">
+                <input type="submit" value="setup" />
+            </div>
+        </fieldset>
+    </form>
+{%- endblock -%}
+
+
