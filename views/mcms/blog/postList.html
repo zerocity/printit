@@ -4,51 +4,75 @@
 
 {% block pageContent %}
   {% if pagination.above.show %}
-    <div class="pagination">
+    <div class="pagination pagination-centered">
+        <ul>
+          <li class="{% if not pagination.prev.show %}disabled{% endif %}">   
+              <a href="{% if pagination.prev.show %}{{ pagination.prev.url }}{%else%}#{% endif %}"> 
+                {{ pagination.prev.text }}
+              </a>
+          </li>
 
-      {% if pagination.prev.show %}
-        <a class="pag-prev" href="{{ pagination.prev.url }}">{{ pagination.prev.text }}</a>
-      {% endif %} 
+          {% for pa in pagination.maxPages %}
+            <li class="{% if pagination.pages.current == pa.page %}active{% endif %}">
+              <a href="{{pa.url}}" >{{pa.page}}</a>
+            </li>
+          {% endfor %}                  
 
-      {% if pagination.count.show %}
-        showing page {{ pagination.pages.current }} of {{ pagination.pages.max }}
-      {% endif %}
-
-      {% if pagination.next.show %}
-        <a class="pag-next" href="{{ pagination.next.url }}">{{ pagination.next.text }}</a>
-      {% endif %} 
-
+          <li class="{% if not pagination.next.show %}disabled{% endif %}">   
+              <a href="{% if pagination.next.show %}{{ pagination.next.url }}{%else%}#{% endif %}"> 
+                {{ pagination.next.text }}
+              </a>
+          </li>
+        </ul>
     </div>
   {% endif %}
 
   {% for post in posts %}
-    <article class="post post-{{ post.slug }}">
+    <article class="post leap post-{{ post.slug }}">
+      <header class="leap-title">
+        
+        <div class="row">
+          <div class="span7">
+              <a href="{{blogRootDir}}{{post.slug}}">{{post.title}}</a>
+          </div>
+          <div class="span4 pull-right">
+              {{ post.author }} - {{ post.date|date('F jS, Y') }} 
+          </div>
+        </div>
 
-      <header><a href="{{blogRootDir}}{{post.slug}}">{{post.title}}</a></header>
-      <div class="subheader">{{ post.author }} - {{ post.date }}</div>
 
-      <div class="content">{{post.content}}</div>
 
+      
+
+      </header>
+      <div class="leap-content">
+        {{post.content}}
+      </div>
       <footer>{{post.footer}}</footer>
-
     </article>
   {% endfor %}
 
   {% if pagination.below.show %}
-    <div class="pagination">
+    <div class="pagination pagination-centered">
+        <ul>
+          <li class="{% if not pagination.prev.show %}disabled{% endif %}">   
+              <a href="{% if pagination.prev.show %}{{ pagination.prev.url }}{%else%}#{% endif %}"> 
+                {{ pagination.prev.text }}
+              </a>
+          </li>
 
-      {% if pagination.prev.show %}
-        <a class="pag-prev" href="{{ pagination.prev.url }}">{{ pagination.prev.text }}</a>
-      {% endif %} 
-      
-      {% if pagination.count.show %}
-        showing page {{ pagination.pages.current }} of {{ pagination.pages.end }}
-      {% endif %}
-      
-      {% if pagination.next.show %}
-        <a class="pag-next" href="{{ pagination.next.url }}">{{ pagination.next.text }}</a>
-      {% endif %} 
+          {% for pa in pagination.maxPages %}
+            <li class="{% if pagination.pages.current == pa.page %}active{% endif %}">
+              <a href="{{pa.url}}" >{{pa.page}}</a>
+            </li>
+          {% endfor %}                  
 
+          <li class="{% if not pagination.next.show %}disabled{% endif %}">   
+              <a href="{% if pagination.next.show %}{{ pagination.next.url }}{%else%}#{% endif %}"> 
+                {{ pagination.next.text }}
+              </a>
+          </li>
+        </ul>
     </div>
   {% endif %}
   

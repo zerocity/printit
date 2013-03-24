@@ -24,21 +24,19 @@
         <form action="" method="post">
             <fieldset>
                 <legend>you can use this form to send us an email:</legend>
-                <ul>
-                    <li>
-                        <label for="name">your name:</label><input type="text" name="name" value="" id="name" />
-                    </li>
-                    <li>
-                        <label for="email">your email:</label><input type="text" name="email" value="" id="email" />
-                    </li>
-                    <li>
-                        <label for="subject">subject:</label><input type="text" name="subject" value="" id="subject" />
-                    </li>
-                    <li>
-                        <label for="text">text:</label><textarea rows="10" cols="30" name="text" id="text"></textarea>
-                    </li>
-                    <li><input type="submit" value="send mail" /></li>
+                <div class="row">
+                    <div class="span3">
+                        <label for="name">Your name:</label><input type="text" name="name" value="" id="name" />
+                        <label for="email">Your email:</label><input type="text" name="email" value="" id="email" />
+                        <label for="subject">Subject:</label><input type="text" name="subject" value="" id="subject "/>
+                    </div>
+                    <div class="span5">
+                        <label for="text">Text:</label>
+                        <textarea rows="6"  class="span5" cols="30" name="text" id="textarea"></textarea>
+                        <input type="submit" class="btn" value="Send Mail" />
+                    </div>
                 </ul>
+                </div>
             </fieldset>
         </form>
   {%- endif -%}

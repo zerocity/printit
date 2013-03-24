@@ -14,11 +14,11 @@ module.exports = function(app) {
             updated:    { type: Date,    default: Date.now(), index: true },
             published:  { type: Boolean, default: false, index: true },
 
-            class:      { type: app.Schema.ObjectID, default: null  },
+            classID:      { type: app.Schema.ObjectID, default: null  },
 
-            type:       { type: app.Schema.ObjectID, default: null  },
+            typeID:       { type: app.Schema.ObjectID, default: null  },
 
-            defense:    { type: app.Schema.ObjectID, default: null },
+            defenseID:    { type: app.Schema.ObjectID, default: null },
 
             size:       { type: Number, default: levels.min, min: levels.min, max: levels.max },
 

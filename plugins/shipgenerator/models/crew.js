@@ -16,9 +16,9 @@ module.exports = function(app) {
             
             typeID: { type: app.Schema.ObjectID }, //
             
-            sensorID: { type: app.Schema.ObjectID },            // general sensor level, gets added to all sensor attributes
+            sensorID: { type: app.Schema.ObjectID }, // general sensor level, gets added to all sensor attributes
 
-            defenseID: { type: app.Schema.ObjectID },            //gets added to all values below
+            defenseID: { type: app.Schema.ObjectID },// gets added to all values below
 
             offenseID: { type: app.Schema.ObjectID },
 

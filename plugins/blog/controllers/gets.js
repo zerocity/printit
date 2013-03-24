@@ -43,6 +43,18 @@ exports.postList = function (req, res) {
         pagination.pages.current = nextPageIndex;
 
         pagination.pages.max = Math.ceil(count / perpage);
+        // swig only supports loops in arrays or objects
+        var maxPagesHack = function () {
+            var a = new Array;
+            for (var i = 0; i < pagination.pages.max ; i++) {
+                a.push({"page":i+1,"url":blogRootDir + i });
+            };
+            return a
+        };
+
+        pagination.maxPages = maxPagesHack();
+
+        console.log(pagination)
 
         var where = {
             published: true
@@ -51,6 +63,7 @@ exports.postList = function (req, res) {
         if (category) {
             where.category = category;
         }
+
 
         Post.all({where: where, order: 'updated DESC', limit: perpage, skip: skip}, function (err, posts) {
             if (!posts || posts.length < 1) {

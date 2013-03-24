@@ -20,6 +20,6 @@ module.exports = {
             show: true,
             text: 'next posts'
         },
-        perpage: 10
+        perpage: 3
     }
 };

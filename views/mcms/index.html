@@ -4,8 +4,11 @@
     <title>{%- block title -%}{{ config.title|raw }} - {{config.branding|raw}}{%- endblock -%}</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     
-    <link rel="stylesheet" type="text/css" href="/css/{{theme}}/main.css" />
+    <link rel="stylesheet" type="text/css" href="/css/{{theme}}/bootstrap.min.css" />
     
+    <link rel="stylesheet" type="text/css" href="/css/{{theme}}/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/{{theme}}/main.css" />
+
     {%- block css -%}{%- endblock -%}
     
     {%- block opengraphdata -%}
@@ -17,6 +20,7 @@
 {%- endblock -%}
 
 {%- block body %}
+    <div class="container">
 
     {%- block before_header -%}{%- endblock %}
     <header>
@@ -35,11 +39,15 @@
       
         {%- block before_header_nav -%}{%- endblock %}
         <nav>
-            <ul>
-                <li><a href="/">home</a></li>
-                <li><a href="/about/">about</a></li>
-                <li><a href="/contact/">contact</a></li>
-		<li><a href="/doc/">doc</a></li>
+
+        <div class="navbar">
+          <div class="navbar-inner">
+            <ul class="nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="/doc/">Documents</a></li>
+                <li class="divider-vertical"></li>
                 {% for plugin in config.plugins -%}
                   {%- if plugin.active -%}
                     {%- for menuItem in plugin.menuItems -%}
@@ -48,14 +56,20 @@
                   {%- endif -%}
                 {%- endfor %}
             </ul>
+          </div>
+        </div>
+
+
         </nav>
+
+
       {%- block after_header_nav -%}{%- endblock %}
     </header>
     {% block after_header -%}{%- endblock -%}
       
     {%- block before_content -%}{%- endblock -%}
     <div id="content" class="main">
-        <header>{%- block pageTitle -%}{%- endblock -%}</header>
+        <header><h1>{%- block pageTitle -%}{%- endblock -%}</h1></header>
         <div class="subheader">{%- block pageAuthor -%}{%- endblock -%}</div>
         
         <div class="content">
@@ -75,6 +89,7 @@
         <footer>
             {%- block before_footer_content -%}{%- endblock -%}
             {%- block footer_content -%}
+            <hr>
             <span>page default footer</span>
             {%- endblock -%}
             {%- block after_footer_content -%}{%- endblock -%}
@@ -90,5 +105,9 @@
     {%- endblock -%}
     {%- block after_footer -%}{%- endblock -%}
   
-    {%- block js -%}{%- endblock -%}
+    {%- block js -%}
+    <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="/js/{{theme}}//bootstrap.min.js"></script>
+    {%- endblock -%}
+    </div>
 {%- endblock -%}
