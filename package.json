@@ -7,7 +7,7 @@
     "testenv": "nodemon app.js --delay 1 -e js,styl,html --debug"
   },
   "dependencies": {
-    "express": ">=3.0.6",
+    "express": "latest",
     "express-form": "latest",
     "express-load": "latest",
     "consolidate": "latest",
@@ -17,7 +17,8 @@
     "jugglingdb": "latest",
     "jugglingdb-mongodb": "latest",
     "express-slash": "latest",
-    "node-markdown": "latest"
+    "node-markdown": "latest",
+    "async": "latest"
   },
   "subdomain": "m-cms",
   "engines": {

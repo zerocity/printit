@@ -1,0 +1,11 @@
+{% extends themeRootFile %}
+
+{% block pageContent %}
+    <article class="ship ship-{{ ship.slug }}">
+        <header>{{ship.name}}</header>
+        <div class="subheader">{{ ship.author }} - {{ ship.date }}</div>
+        <div class="content">
+            {{ship.desc}}
+        </div>
+    </article>
+{% endblock %}

@@ -1,5 +1,8 @@
 "use strict";
 
 module.exports = {
-    rootUrl: 'doc'
-}
+    rootUrl: 'doc',
+    menuItems: [
+        {url: '/doc/', text: 'docs'}
+    ]
+};
