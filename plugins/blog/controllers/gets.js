@@ -54,8 +54,6 @@ exports.postList = function (req, res) {
 
         pagination.maxPages = maxPagesHack();
 
-        console.log(pagination)
-
         var where = {
             published: true
         };

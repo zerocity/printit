@@ -25,6 +25,12 @@ module.exports = {
             menuItems: [
                 {url: '/blog/', text: 'blog'}
             ]
+        },
+        testing:{
+            active:true,
+            menuItems:[
+                {url: '/test/', text: 'testing'}
+            ]
         }
     }
 };
