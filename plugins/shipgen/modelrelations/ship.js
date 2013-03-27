@@ -18,6 +18,8 @@ exports.do = function (app) {
     Ship.hasMany(Slot, {as: 'slots', foreignKey: 'shipId'});
     Ship.hasMany(Crew, {as: 'crew', foreignKey: 'shipId'});
     
+    //slots may house any of the mods,
+    //which one an individual slot can will be determined by Slot.modType
     Slot.hasMany(Weapon, {as: 'weapons', foreignKey: 'shipId'});
     Slot.hasMany(Hull, {as: 'hulls', foreignKey: 'shipId'});
     Slot.hasMany(Shield, {as: 'shields', foreignKey: 'shipId'});

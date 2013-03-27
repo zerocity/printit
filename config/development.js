@@ -4,13 +4,13 @@ var nodemailer = require('nodemailer'),
     mail = 'microcmsmailtest@gmail.com'; //your mail address the contact page should use
 
 module.exports = {
-    name      : 'mcms',             // name of this app
-    author    : 'mcms team',        //your name or the name of your company
+    name      : 'shipgen',             // name of this app
+    author    : 'printit team',        //your name or the name of your company
     title     : '&#181;-cms',        //the page title will be used in the <title> tag and instead of the logo.
-    branding  : 'dry kiss',
+    branding  : 'prinit. games that matter.',
     logo      : '',                 //leave blank or set to false to use the title instead
     protocol  : 'http://',          //http or https
-    url       : 'm-cms.com',                        //url this app can be reached at 
+    url       : 'pvpvz.com',                        //url this app can be reached at 
     version   :  '0.0.1',                           //the version number of this application.
     port      : 2323,                               //the port this runs on
     email     : mail,                               //your mail address the contact page should use
