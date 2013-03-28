@@ -8,13 +8,11 @@ module.exports = function(app) {
             name: { type: String, default: '', length: 50},
             slug: { type: String, default: '', length: 50},
             published: { type: Boolean, default: false },
-            type: { type: String, default: 'common' },
+            engine: { type: String, default: 'common' },
 
             classID: {type: app.Schema.ObjectID, default: null },
 
-            size: { type: Number, default: levels.min, min: levels.min, max: levels.max },
-            crewSpace: { type: Number, default: levels.min, min: levels.min, max: levels.max },
-            
+            size: { type: Number, default: levels.min, min: levels.min, max: levels.max },        
             speed: { type: Number, default: levels.min, min: levels.min, max: levels.max },
             acceleration: { type: Number, default: levels.min, min: levels.min, max: levels.max },
             consumption: { type: Number, default: levels.min, min: levels.min, max: levels.max },
