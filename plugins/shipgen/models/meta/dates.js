@@ -7,7 +7,8 @@ module.exports = function(app) {
             date:      { type: Date,    default: Date.now(), index: true },
             updated:   { type: Date,    default: Date.now(), index: true },
             published: { type: Boolean, default: false, index: true },
-            version:   { type: Number, default: '0' }
+            version:   { type: Number, default: '0' },
+            author:    { type: app.Schema.ObjectID, default: null }
         });
 
     return Dates;
