@@ -1,11 +1,21 @@
 "use strict";
 
+/*
+ * Shiptypes:
+ * hq
+ * common
+ * elite
+ * charge
+ * heavy
+ * 
+ */
+
 module.exports = {
     ships: [
-        {name: 'hamdar', slug: 'hamdar', published: true, desc: 'hamdar is a small well rounded fighter class ship capable of handling almost anything averagely.', class: 'fighter', type: 'standard'},
-        {name: 'tiamat', slug: 'tiamat', published: true, desc: 'the tiamat is a fast but vulnerable ship capable of hitting and retreating.', class: 'fighter', type: 'assault'},
-        {name: 'polymesus', slug: 'ploymesus', published: true, desc: 'polymesus is a small fighter class bomber.', size: 1, class: 'fighter', type: 'support'},
-        {name: 'enratos', slug: 'enratos', published: true, desc: 'the enratos is an elite fighter, capable of bombing big targets or attacking enemy fighters with the onboard cannons.', size: 1, class: 'fighter', type: 'elite' },
+        {name: 'hamdar', slug: 'hamdar', published: true, desc: 'hamdar is a small well rounded fighter class ship capable of handling almost anything averagely.', class: 'fighter', type: 'common'},
+        {name: 'tiamat', slug: 'tiamat', published: true, desc: 'the tiamat is a fast but vulnerable ship capable of hitting and retreating.', class: 'fighter', type: 'charge'},
+        {name: 'polymesus', slug: 'ploymesus', published: true, desc: 'polymesus is a small fighter class bomber.', size: 1, class: 'fighter', type: 'heavy'},
+        {name: 'enratos', slug: 'enratos', published: true, desc: 'the enratos is an elite fighter, capable of bombing big targets or attacking enemy fighters with the onboard cannons.', size: 2, class: 'fighter', type: 'elite' },
         {name: 'calypso', slug: 'calypso', published: true, desc: 'the calypso is a hq flagship, usually guarded by a fleet of enratos. it is the biggest fighter as of yet.', size: 2, class: 'fighter', type: 'hq' }
     ],
     engines: [
