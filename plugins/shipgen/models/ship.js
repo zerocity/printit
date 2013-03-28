@@ -7,7 +7,10 @@ module.exports = function(app) {
 
         // define models
         Ship = app.schema.define('Ship', {
+            name: String,
+            slug: String,
             published: { type: Boolean, default: false },
+
             size: { type: Number, default: 1, min: levels.min, max: levels.max },
             crew: { type: Number, default: 1, min: levels.min, max: levels.max },
             cost: { type: Number, default: 1, min: levels.min }

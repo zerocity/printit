@@ -10,13 +10,13 @@ module.exports = function(app) {
             published: { type: Boolean, default: false },
 
             size: { type: Number, default: levels.min, min: levels.min, max: levels.max },
-            
+
             crew: { type: Number, default: levels.min, min: levels.min, max: levels.max },
-            
+
             type: { type: app.Schema.ObjectID },
-            
-            modType: { type: String, default: 'weapon' },
-            
+
+            modType: { type: String, default: 'weapon' }, //weapon, shield, hull, engine, sensor
+
             cost: { type: Number, default: levels.min, min: levels.min }
         });
 
