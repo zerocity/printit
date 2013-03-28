@@ -4,6 +4,7 @@ module.exports = function(app) {
     var levels = app.plugins.shipgen.config[app.get('env')].levels,
         // define models
         Class = app.schema.define('Class', {
+
             name: { type: String, default: '', length: 50},
             slug: { type: String, default: '', length: 50},
             published: { type: Boolean, default: false },

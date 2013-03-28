@@ -7,6 +7,7 @@ module.exports = function(app) {
 
         // define models
         Ship = app.schema.define('Ship', {
+
             name: { type: String, default: '', length: 50},
             slug: { type: String, default: '', length: 50},
             published: { type: Boolean, default: false },

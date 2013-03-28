@@ -9,8 +9,6 @@ module.exports = function(app) {
             published: { type: Boolean, default: false },
             type: { type: String, default: 'common' },
 
-            published: { type: Boolean, default: false, index: true },
-
             classID: {type: app.Schema.ObjectID, default: null },
 
             size: { type: Number, default: levels.min, min: levels.min, max: levels.max },
