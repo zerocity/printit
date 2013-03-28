@@ -12,7 +12,6 @@ module.exports = function(app) {
             classID: {type: app.Schema.ObjectID, default: null },
 
             size: { type: Number, default: levels.min, min: levels.min, max: levels.max },
-            crewSpace: { type: Number, default: 0, min: 0, max: levels.max },
             
             armor: { type: Number, default: levels.min, min: levels.min, max: levels.max },
             repair: { type: Number, default: levels.min, min: levels.min, max: levels.max },

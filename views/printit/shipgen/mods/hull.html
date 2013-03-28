@@ -1,30 +1,23 @@
 {% extends themeRootFile %}
 
 {% block pageContent %}
-    <article class="engine engine-{{ engine.slug }}">
+    <article class="hull hull-{{ hull.slug }}">
+    <header>{{hull.name}}</header>
+    <img src="{{hull.img.url}}" alt="{{hull.img.alt}} ">
 
-        <header>{{engine.name}}</header>
-				<img src="{{ship.img.url}}" alt="{{ship.img.alt}} ">
-        <div class="content">
-            {{engine.desc}}
-        </div>
+    <div class="content">
+      {{hull.desc}}
+    </div>
 
-        
-
-			<dl class="">
-				<dt>Size</dt><dd>{{hull.size}}</dd>
-				<dt>Crew Space</dt><dd>{{hull.crewSpace}}</dd>
-				<dt>Type</dt><dd>{{hull.category}}</dd>
-				<hr>
-				<dt>Velocity</dt><dd>{{hull.speed}}</dd> 
-				<dt>Acceleration</dt><dd>{{hull.acceleration}}</dd>
-				<dt>Consumption</dt><dd>{{hull.consumption}}</dd>
-				<hr>
-				<dt>Costs</dt><dd>{{hull.cost}}</dd>
-			</dl>
-
-
-    </article>
-
+    <dl class="">
+      <dt>Size</dt><dd>{{hull.size}}</dd>
+      <dt>Category</dt><dd>{{hull.category}}</dd>
+      <hr>
+      <dt>Armor</dt><dd>{{hull.armor}}</dd> 
+      <dt>Repair</dt><dd>{{hull.repair}}</dd>
+      <hr>
+      <dt>Costs</dt><dd>{{hull.cost}}</dd>
+    </dl>
+  </article>
 
 {% endblock %}

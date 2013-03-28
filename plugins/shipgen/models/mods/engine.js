@@ -4,12 +4,10 @@ module.exports = function(app) {
     var levels = app.plugins.shipgen.config[app.get('env')].levels,
         // define models
         Engine = app.schema.define('Engine', {
-
             name: { type: String, default: '', length: 50},
             slug: { type: String, default: '', length: 50},
             published: { type: Boolean, default: false },
-            engine: { type: String, default: 'common' },
-
+ 
             classID: {type: app.Schema.ObjectID, default: null },
 
             size: { type: Number, default: levels.min, min: levels.min, max: levels.max },        
